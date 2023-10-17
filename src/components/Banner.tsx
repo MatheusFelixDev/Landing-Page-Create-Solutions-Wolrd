@@ -5,8 +5,10 @@ import { Carousel }from './carousel'
 export function Banner() {
   return (
     <section id="banner" className="bg-black text-white py-16 px-4">
+
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <div className="text-center md:text-left">
+        
+        <div className="text-center md:text-left ">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             Capte mais Leads
           </h1>
@@ -21,9 +23,11 @@ export function Banner() {
             <Button variant="link">Saiba mais</Button>
           </div>
         </div>
+
         <div className="text-center">
           < Carousel />
         </div>
+        
       </div>
     </section>
   );
