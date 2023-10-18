@@ -6,15 +6,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import { Button } from "./ui/button";
+
 export function Packs() {
     return (
 
         <section id="packs">
-            <div className='w-full py-[10rem] px-4 flex flex-col justify-center'>
+            <div className='w-full my-4 px-4 flex flex-col justify-center'>
                 <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8 justify-center  '>
                     <Card className="w-[350px] mx-4 shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 ">
                         <CardHeader>
-                            <CardTitle className='text-[#00df9a] text-2xl font-bold text-center py-8'>Plano START</CardTitle>
+                            <CardTitle className='text-[#00df9a] text-2xl font-bold text-center'>Plano START</CardTitle>
                                 <CardDescription className='text-center text-4xl font-bold'>
                                     $299
                                 </CardDescription>
@@ -49,13 +51,15 @@ export function Packs() {
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
+
+                        <Button className='justify-center my-8 font-bold'>COMEÇAR</Button>
                     </Card>
 
                     
 
                     <Card className="w-[350px] mx-4 shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 ">
                         <CardHeader>
-                            <CardTitle className='text-[#00df9a] text-2xl font-bold text-center py-8'>Plano Premium</CardTitle>
+                            <CardTitle className='text-[#00df9a] text-2xl font-bold text-center '>Plano Premium</CardTitle>
                                 <CardDescription className='text-center text-4xl font-bold'>
                                     $699
                                 </CardDescription>
@@ -119,6 +123,8 @@ export function Packs() {
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
+
+                        <Button className='justify-center my-8 font-bold'>COMEÇAR</Button>
                     </Card>
                 </div>
             </div>

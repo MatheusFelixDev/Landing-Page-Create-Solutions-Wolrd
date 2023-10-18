@@ -1,9 +1,9 @@
 import { NavBar } from './components/NavBar';
 import { Banner } from './components/Banner'
-import { Button } from './components/ui/button';
 import { Service } from './components/service';
 import { Newsletter } from './components/Newsletter';
 import { Packs } from './components/Packs';
+import { Footer } from './components/Footer';
 
 export function App() {
   return(
@@ -13,8 +13,7 @@ export function App() {
       <Service />
       <Newsletter />
       <Packs />
-      <h1>O sangue de Jesus tem poder</h1>
-      <Button>Amém</Button>
+      <Footer />
     </>
   )
 }
