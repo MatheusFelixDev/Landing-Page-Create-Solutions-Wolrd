@@ -1,5 +1,5 @@
 import { Button } from './ui/button'
-
+import { DialogForm} from './DialogForm'
 import { Carousel }from './carousel'
 
 export function Banner() {
@@ -19,7 +19,7 @@ export function Banner() {
           Transforme Seu Site em uma Máquina de Conversões com Soluções Personalizadas e Eficazes que Garantem Resultados Extraordinários. Capte Leads com Maestria e Alcance o Sucesso Online que Você Merece!
           </p>
           <div>
-            <Button className="mr-4">Solicite sua avaliação</Button>
+            <DialogForm />
             <Button variant="link">Saiba mais</Button>
           </div>
         </div>
