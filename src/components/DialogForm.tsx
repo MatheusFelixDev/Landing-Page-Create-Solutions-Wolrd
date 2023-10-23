@@ -30,8 +30,8 @@ import { Input } from "@/components/ui/input"
 
 
 const formSchema = z.object({
-    name: z.string().min(2, { message: "Mínimo de 2 caracteres." }),
-    email: z
+    FNAME: z.string().min(2, { message: "Mínimo de 2 caracteres." }),
+    EMAIL: z
       .string()
       .email({
         message: "E-mail inválido.",
@@ -43,7 +43,7 @@ const formSchema = z.object({
         message: "Máximo de 50 caracteres.",
       }),
     
-    phone: z.string().min(10, { message: "Mínimo de 10 caracteres." }),
+    PHONE: z.string().min(10, { message: "Mínimo de 10 caracteres." }),
   });
   
 
@@ -55,9 +55,9 @@ export function DialogForm() {
    const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-        name:"",
-        email: "",
-        phone:"",
+        FNAME:"",
+        EMAIL: "",
+        PHONE:"",
     },
   });
 
@@ -67,8 +67,9 @@ export function DialogForm() {
     // ✅ This will be type-safe and validated.
     console.log(data);
   }
+  
  
-    return (
+  return (
     <Dialog>
       <DialogTrigger asChild>
         <Button>Aumente suas vendas</Button>
@@ -85,66 +86,93 @@ export function DialogForm() {
                 
         <div className="grid gap-4 py-4">
           
-        <Form {...form}>
-  <form onSubmit={form.handleSubmit(onSubmit)} className=" gap-2">
-    <FormField
-      control={form.control}
-      name="name"
-      render={({ field }) => (
-        <FormItem className="mb-8">
-          <FormLabel className="hidden">Nome</FormLabel>
-          <FormControl>
-            <Input placeholder="Nome" {...field} />
-          </FormControl>
-          <FormDescription className="">Campo obrigatorio*</FormDescription>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-     <FormField
-      control={form.control}
-      name="email"
-      render={({ field }) => (
-        <FormItem className="mb-8">
-          <FormLabel className="hidden">Email</FormLabel>
-          <FormControl>
-            <Input placeholder="E-mail" {...field} />
-          </FormControl>
-          <FormDescription className="">Campo obrigatorio*</FormDescription>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-    <FormField
-      control={form.control}
-      name="phone"
-      render={({ field }) => (
-        <FormItem className="mb-8">
-          <FormLabel className="hidden">Telefone</FormLabel>
-          <FormControl>
-            <Input placeholder="Telefone" {...field} />
-          </FormControl>
-          <FormDescription className="hidden">This is your phone</FormDescription>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-   
-    <Button className="my-2 w-full font-bold" type="submit">Cadastrar</Button>
-  </form>
-</Form>
-
+          <Form {...form}>
+          <div id="mc_embed_shell">
+  
+              <div id="mc_embed_signup">
+                
           
-        </div>
+                <form
+                  
+                  action="https://gmail.us12.list-manage.com/subscribe/post?u=64d0de3e8d89d88ae540c2cdd&amp;id=e82f051e66&amp;f_id=001d48e0f0"
+                  method="post"
+                  id="mc-embedded-subscribe-form" 
+                  name="mc-embedded-subscribe-form"
+
+                  target="_self" 
+                  noValidate
+                >
+          
+          <div id="mc_embed_signup_scroll">    
+            <FormField
+              control={form.control}
+              name="FNAME"
+              render={({ field }) => (
+                <FormItem className="mb-8">
+                  <FormLabel className="hidden">Nome</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Nome" {...field} />
+                  </FormControl>
+                  <FormDescription className="">Campo obrigatorio*</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+                
+            <FormField
+              control={form.control}
+              name="EMAIL"
+              render={({ field }) => (
+                <FormItem className="mb-8">
+                  <FormLabel className="hidden">Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="E-mail" {...field} />
+                  </FormControl>
+                  <FormDescription className="">Campo obrigatorio*</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+                
+            <FormField
+                control={form.control}
+                name="PHONE"
+                render={({ field }) => (
+                    <FormItem className="mb-8">
+                    <FormLabel className="hidden">Telefone</FormLabel>
+                    <FormControl>
+                        <Input placeholder="Telefone" {...field} />
+                    </FormControl>
+                    <FormDescription className="hidden">This is your phone</FormDescription>
+                    <FormMessage />
+                    </FormItem>
+                )}
+            />
+                    
+   
+                    <Button
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="my-2 w-full font-bold" type="submit">Cadastrar</Button>
+            </div>
+          </form>
+
+          </div>
+          </div>
+        </Form> 
+      </div>
 
                 
         <DialogFooter>
-        <p >
-                            Nós nos preocupamos com a proteção de seus dados. Leia nossa    
-                            <Button variant="link">Política de Privacidade .</Button>
-                        </p>
+          <p >
+            Nós nos preocupamos com a proteção de seus dados. Leia nossa    
+            <Button variant="link">Política de Privacidade .</Button>
+          </p>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   )
 }
+
+
+
+  
