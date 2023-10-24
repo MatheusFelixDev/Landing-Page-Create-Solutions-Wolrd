@@ -20,7 +20,10 @@ export function Banner() {
           </p>
           <div>
             <DialogForm />
-            <Button variant="link">Saiba mais</Button>
+            <a href="#service">
+              <Button variant="link">Saiba mais</Button>
+            </a>
+            
           </div>
         </div>
 

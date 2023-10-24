@@ -63,7 +63,7 @@ export function NavBar(){
                 </li>
 
                 <li className='p-4 border-b-4 border-gray-600 transition-colors hover:scale-105 duration-300 hover:text-[#00df9a]'>
-                    <a href="#services"
+                    <a href="#service"
                        onClick={handleNav}
                     >
                         Serviços

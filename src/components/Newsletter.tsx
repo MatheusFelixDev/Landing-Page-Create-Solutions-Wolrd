@@ -14,9 +14,11 @@ export function Newsletter(){
                         <p>Assine nosso boletim de noticias e mantenha-se atualizado. É de GRAÇA!!!</p>
                     </div>
                     <div className='my-4 '>
-                        <div className="flex w-full max-w-sm items-center  space-x-2 ">
-                            <Input type="email" placeholder="Email" />
-                            <Button type="submit">Subscribe</Button>
+                        <div>
+                            <form className='flex w-full max-w-sm items-center space-x-2' method="post" action="https://systeme.io/embedded/11738466/subscription">
+                                <Input type="email" placeholder="Email" name="email" />
+                                <Button type="submit">Subscribe</Button>
+                            </form>
                         </div>
                         <p className="my-2">
                             Nós nos preocupamos com a proteção de seus dados. Leia nossa    
