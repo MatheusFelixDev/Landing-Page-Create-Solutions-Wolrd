@@ -1,4 +1,7 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import icon01 from "../assets/icon01.svg"
+import icon02 from "../assets/icon02.svg"
+import icon03 from "../assets/icon03.svg"
 
 
 export function Service() {
@@ -20,8 +23,9 @@ export function Service() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col justify-center items-center md:flex-row md:justify-between my-8 gap-8">
+                        <div className="flex flex-col justify-center items-center md:flex-row md:justify-between my-12 gap-8">
                             <Card className="w-[350px] mx-4">
+                            <img className='w-20 mx-auto mt-[-3rem]' src={icon01} alt="/" />
                                 <CardHeader>
                                     <CardTitle className='text-[#00df9a]'>Engajamento</CardTitle>
                                     <CardDescription>
@@ -34,6 +38,7 @@ export function Service() {
                             </Card>
 
                             <Card className="w-[350px] mx-4">
+                            <img className='w-20 mx-auto mt-[-3rem]' src={icon02} alt="/" />
                                 <CardHeader>
                                     <CardTitle className='text-[#00df9a]'>Otimização</CardTitle>
                                     <CardDescription>
@@ -45,6 +50,7 @@ export function Service() {
                             </Card>
 
                             <Card className="w-[350px] mx-4">
+                                <img className='w-20 mx-auto mt-[-3rem]' src={icon03} alt="/" />
                                 <CardHeader>
                                     <CardTitle className='text-[#00df9a]'>Gestão de Leads</CardTitle>
                                     <CardDescription>

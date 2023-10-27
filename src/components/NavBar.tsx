@@ -12,7 +12,7 @@ export function NavBar(){
         <h1 className='w-full text-3xl font-bold text-green-500'>
                
                 
-                    CreateSolutionsWolrd.
+                    CreateSolutionsWorld.
                 
             </h1>
         <ul className='hidden md:flex '>
