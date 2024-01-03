@@ -16,17 +16,17 @@ import { Button } from "./ui/button"
 
 
 const createUserFormSchema = z.object({
-    FNAME: z.string().nonempty("O nome é obrigatório").min(2, { message: "Mínimo de 2 caracteres." }),
+  first_name: z.string().nonempty("O nome é obrigatório").min(2, { message: "Mínimo de 2 caracteres." }),
 
 
-    EMAIL: z.string()
+  email: z.string()
         .nonempty("O e-mail é obrigatório")
         .email("Formato de e-mail inválido")
         .max(50, {
         message: "Máximo de 50 caracteres.",
       }),
     
-    PHONE: z.string().min(10, { message: "Mínimo de 10 caracteres." }),
+      phone_number: z.string().min(10, { message: "Mínimo de 10 caracteres." }),
   });
 
 
@@ -36,9 +36,9 @@ export function UserForm() {
     const form = useForm<z.infer<typeof createUserFormSchema>>({
     resolver: zodResolver(createUserFormSchema),
     defaultValues: {
-        FNAME:"",
-        EMAIL: "",
-        PHONE:"",
+      first_name:"",
+      email: "",
+        phone_number:"",
     },
   });
 
@@ -52,10 +52,10 @@ export function UserForm() {
                 
           
                 <form
-                  action="https://gmail.us12.list-manage.com/subscribe/post?u=64d0de3e8d89d88ae540c2cdd&amp;id=e82f051e66&amp;f_id=001d48e0f0"
+                  action="https://systeme.io/embedded/11738466/subscription"
                   method="post"
-                  id="mc-embedded-subscribe-form" 
-                  name="mc-embedded-subscribe-form"
+                  id="userForm" 
+                  name="userForm"
                   target="_self" 
                         noValidate
                         onSubmit={(e) => {
@@ -73,7 +73,7 @@ export function UserForm() {
           <div id="mc_embed_signup_scroll">    
             <FormField
               control={form.control}
-              name="FNAME"
+              name="first_name"
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <FormLabel className="hidden">Nome</FormLabel>
@@ -88,7 +88,7 @@ export function UserForm() {
                 
             <FormField
               control={form.control}
-              name="EMAIL"
+              name="email"
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <FormLabel className="hidden">Email</FormLabel>
@@ -103,7 +103,7 @@ export function UserForm() {
                 
             <FormField
                 control={form.control}
-                name="PHONE"
+                name="phone_number"
                 render={({ field }) => (
                     <FormItem className="mb-8">
                     <FormLabel className="hidden">Telefone</FormLabel>

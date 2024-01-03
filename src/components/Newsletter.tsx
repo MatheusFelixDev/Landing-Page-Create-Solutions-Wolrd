@@ -15,7 +15,8 @@ export function Newsletter(){
                     </div>
                     <div className='my-4 '>
                         <div>
-                            <form className='flex w-full max-w-sm items-center space-x-2' method="post" action="https://systeme.io/embedded/11738466/subscription">
+                            
+                            <form className='flex w-full max-w-sm items-center space-x-2' method="post" action="https://systeme.io/embedded/11950168/subscription" >
                                 <Input type="email" placeholder="Email" name="email" />
                                 <Button type="submit">Subscribe</Button>
                             </form>
